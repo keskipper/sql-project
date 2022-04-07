@@ -1,0 +1,19 @@
+WITH q AS (
+  SELECT 
+    s.students_first_name, s.students_last_name,
+    p.professors_first_name, p.professors_last_name, 
+    count(DISTINCT g.grades_id) counter 
+  FROM grades g
+  JOIN students s ON g.students_id = s.students_id
+  JOIN courses c ON g.courses_id = c.courses_id
+  JOIN professors p ON c.courses_professor = p.professors_id
+  GROUP BY
+    s.students_first_name, s.students_last_name,
+    p.professors_first_name, p.professors_last_name
+)
+
+SELECT * FROM q
+WHERE q.counter = (
+  SELECT max(counter) FROM q
+)
+

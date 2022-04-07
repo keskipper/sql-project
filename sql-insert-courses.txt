@@ -1,0 +1,16 @@
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Programming 101', '2');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Intro to SQL', '1');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Web Design', '4');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Visual Basic', '5');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Software Engineering', '3');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Intro to React', '1');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('C++', '3');
+INSERT INTO courses(courses_name, courses_professor)
+VALUES('Linux', '4');

@@ -1,0 +1,8 @@
+SELECT q.courses_name AS 'COURSE NAME', AVG(q.grades_grade) AS 'AVERAGE COURSE GRADE'
+FROM(
+    SELECT c.courses_id, c.courses_name, g.grades_id, g.grades_grade
+	FROM courses c
+	RIGHT JOIN grades g
+	ON c.courses_id = g.courses_id) AS q
+GROUP BY q.courses_id
+ORDER BY AVG(q.grades_grade) ASC;

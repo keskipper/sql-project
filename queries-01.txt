@@ -1,0 +1,8 @@
+SELECT AVG(q.grades_grade) AS 'AVERAGE GRADE GIVEN', q.professors_first_name AS 'PROFESSOR' FROM
+    (SELECT p.professors_first_name, p.professors_last_name, p.professors_id, c.courses_name, g.grades_grade
+	FROM grades g
+	LEFT JOIN courses c
+	ON c.courses_id = g.courses_id
+	LEFT JOIN professors p
+	ON p.professors_id = c.courses_professor) AS q
+GROUP BY q.professors_first_name;

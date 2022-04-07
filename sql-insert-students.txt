@@ -1,0 +1,30 @@
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('John', 'Smith', 'john@smith.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Jake', 'Smith', 'jake@smith.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Bhrati', 'Patil', 'bhrati@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Kristina', 'James', 'kj@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Katie', 'Reynolds', 'kr@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Emily', 'Shanti', 'emilys@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Chris', 'Jameson', 'chris@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Horace', 'Scott', 'horace@work.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Ellie', 'Shanti', 'ellie@home.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Marilyn', 'Jones', 'mj@jones.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Ayewande', 'Smith', 'wanda@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Julian', 'Arnold', 'julian@ja.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Misty', 'Horace', 'misty@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Padma', 'Shakti', 'padma@email.com');
+INSERT INTO students(students_first_name, students_last_name, students_email)
+VALUES ('Katherine', 'Skipper', 'katherine@email.com');

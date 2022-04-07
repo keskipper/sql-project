@@ -1,0 +1,7 @@
+SELECT c.courses_name, s.students_first_name
+FROM students s
+RIGHT JOIN grades g
+ON g.students_id = s.students_id
+LEFT JOIN courses c
+ON c.courses_id = g.courses_id
+ORDER BY courses_name;

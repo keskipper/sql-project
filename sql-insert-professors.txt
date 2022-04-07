@@ -1,0 +1,10 @@
+INSERT INTO professors(professors_first_name, professors_last_name, professors_email)
+VALUES ('Jordan', 'Hudgens', 'jordan@email.com');
+INSERT INTO professors(professors_first_name, professors_last_name, professors_email)
+VALUES ('Shari', 'Bemis', 'shari@work.com');
+INSERT INTO professors(professors_first_name, professors_last_name, professors_email)
+VALUES ('Elvis', 'Jones', 'elvis@school.com');
+INSERT INTO professors(professors_first_name, professors_last_name, professors_email)
+VALUES ('Matt', 'Onyon', 'matt@onyon.com');
+INSERT INTO professors(professors_first_name, professors_last_name, professors_email)
+VALUES ('Craig', 'Allwarden', 'craig@work.com');

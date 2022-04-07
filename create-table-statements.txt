@@ -1,0 +1,43 @@
+CREATE TABLE `students` (
+  `students_id` int NOT NULL AUTO_INCREMENT,
+  `students_first_name` varchar(45) NOT NULL,
+  `students_last_name` varchar(45) NOT NULL,
+  `students_email` varchar(80) NOT NULL,
+  PRIMARY KEY (`students_id`),
+  UNIQUE KEY `students_id_UNIQUE` (`students_id`),
+  UNIQUE KEY `students_email_UNIQUE` (`students_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `professors` (
+  `professors_id` int NOT NULL AUTO_INCREMENT,
+  `professors_first_name` varchar(45) NOT NULL,
+  `professors_last_name` varchar(45) NOT NULL,
+  `professors_email` varchar(80) NOT NULL,
+  PRIMARY KEY (`professors_id`),
+  UNIQUE KEY `professors_id_UNIQUE` (`professors_id`),
+  UNIQUE KEY `professors_email_UNIQUE` (`professors_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `courses` (
+  `courses_id` int NOT NULL AUTO_INCREMENT,
+  `courses_name` varchar(80) NOT NULL,
+  `courses_professor` int DEFAULT NULL,
+  PRIMARY KEY (`courses_id`),
+  UNIQUE KEY `courses_id_UNIQUE` (`courses_id`),
+  UNIQUE KEY `course_name_UNIQUE` (`courses_name`),
+  KEY `professors_id_idx` (`courses_professor`),
+  CONSTRAINT `professors_id` FOREIGN KEY (`courses_professor`) REFERENCES `professors` (`professors_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `grades` (
+  `grades_id` int NOT NULL AUTO_INCREMENT,
+  `students_id` int NOT NULL,
+  `courses_id` int NOT NULL,
+  `grades_grade` decimal(4,2) NOT NULL,
+  PRIMARY KEY (`grades_id`),
+  UNIQUE KEY `grades_id_UNIQUE` (`grades_id`),
+  KEY `students_id_idx` (`students_id`),
+  KEY `courses_id_idx` (`courses_id`),
+  CONSTRAINT `courses_id` FOREIGN KEY (`courses_id`) REFERENCES `courses` (`courses_id`),
+  CONSTRAINT `students_id` FOREIGN KEY (`students_id`) REFERENCES `students` (`students_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

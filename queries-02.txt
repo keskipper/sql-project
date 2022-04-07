@@ -1,0 +1,6 @@
+SELECT MAX(q.grades_grade) AS 'HIGHEST GRADE', q.students_first_name AS 'NAME' FROM(
+    SELECT s.students_first_name, g.students_id, g.grades_id, g.grades_grade
+	FROM grades g
+	LEFT JOIN students s
+	ON s.students_id = g.students_id) AS q
+GROUP BY q.students_id;
